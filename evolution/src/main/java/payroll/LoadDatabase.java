@@ -9,16 +9,16 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 class LoadDatabase {
 
-	private static final Logger log = LoggerFactory.getLogger(LoadDatabase.class);
+  private static final Logger log = LoggerFactory.getLogger(LoadDatabase.class);
 
-	@Bean
-	CommandLineRunner initDatabase(EmployeeRepository repository) {
+  @Bean
+  CommandLineRunner initDatabase(EmployeeRepository repository) {
 
-		return args -> {
-			// tag::new_constructor[]
-			log.info("Preloading " + repository.save(new Employee("Bilbo", "Baggins", "burglar")));
-			log.info("Preloading " + repository.save(new Employee("Frodo", "Baggins", "thief")));
-			// end::new_constructor[]
-		};
-	}
+    return args -> {
+      // tag::new_constructor[]
+      log.info("Preloading " + repository.save(new Employee("Bilbo", "Baggins", "burglar")));
+      log.info("Preloading " + repository.save(new Employee("Frodo", "Baggins", "thief")));
+      // end::new_constructor[]
+    };
+  }
 }

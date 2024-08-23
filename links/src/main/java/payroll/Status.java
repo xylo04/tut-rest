@@ -1,8 +1,7 @@
 package payroll;
 
 enum Status {
-
-	IN_PROGRESS, //
-	COMPLETED, //
-	CANCELLED
+  IN_PROGRESS, //
+  COMPLETED, //
+  CANCELLED
 }

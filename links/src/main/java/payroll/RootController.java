@@ -9,13 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 class RootController {
 
-	@GetMapping
-	RepresentationModel<?> index() {
+  @GetMapping
+  RepresentationModel<?> index() {
 
-		RepresentationModel<?> rootModel = new RepresentationModel<>();
-		rootModel.add(linkTo(methodOn(EmployeeController.class).all()).withRel("employees"));
-		rootModel.add(linkTo(methodOn(OrderController.class).all()).withRel("orders"));
-		return rootModel;
-	}
-
+    RepresentationModel<?> rootModel = new RepresentationModel<>();
+    rootModel.add(linkTo(methodOn(EmployeeController.class).all()).withRel("employees"));
+    rootModel.add(linkTo(methodOn(OrderController.class).all()).withRel("orders"));
+    return rootModel;
+  }
 }
